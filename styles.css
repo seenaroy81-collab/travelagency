@@ -385,13 +385,21 @@ body {
 
 @media (max-width: 768px) {
     .page-hero {
-        height: 50vh;
-        min-height: 400px;
+        height: 60vh;
+        min-height: 480px;
         border-radius: 0 0 30px 30px;
+    }
+
+    .page-hero-bg img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .page-hero-content {
         padding: 0 20px;
+        width: 100%;
     }
 }
 
