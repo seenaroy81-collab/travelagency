@@ -1,0 +1,159 @@
+/* ========================================
+   MOBILE RECTIFICATION STYLES
+   Targeting max-width: 768px and below
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Global Container Adjustments */
+    .container {
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* ========================================
+       ABOUT PAGE RECTIFICATION
+       ======================================== */
+
+    /* Hero Section */
+    .page-hero {
+        height: 40vh;
+        min-height: 300px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Grids to Single Column */
+    .about-grid,
+    .about-stats,
+    .mv-grid,
+    .values-grid,
+    .why-grid,
+    .contact-grid,
+    .contact-info-cards,
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    /* About Images */
+    .about-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img-2 {
+        margin-top: 20px;
+    }
+
+    /* Timeline Rectification */
+    .timeline {
+        margin: 40px auto 0;
+    }
+
+    .timeline::before {
+        left: 20px;
+        /* Align line to left */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+        margin-bottom: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 10px !important;
+        /* Align dot to left line */
+        right: auto !important;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-date {
+        text-align: left;
+    }
+
+    /* Why Choose Us Items */
+    .why-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .why-number {
+        font-size: 2.5rem;
+    }
+
+    /* ========================================
+       CONTACT PAGE RECTIFICATION
+       ======================================== */
+    .contact-form-wrapper {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 12px 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* ========================================
+       SERVICES & PACKAGES RECTIFICATION
+       ======================================== */
+    .service-card-premium {
+        height: auto;
+        min-height: 320px;
+    }
+
+    /* Detail Pages Layout */
+    .service-layout {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .service-main img {
+        height: auto;
+    }
+
+    .sidebar {
+        order: 1;
+        /* Keep sidebar at bottom or top depending on preference. Usually bottom is better for secondary info. */
+    }
+
+    .service-card-content p {
+        opacity: 1 !important;
+        height: auto !important;
+        transform: none !important;
+    }
+}

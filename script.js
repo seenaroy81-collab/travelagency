@@ -101,7 +101,7 @@
                     loading.style.display = 'none';
                 }, 800);
             }
-        }, 1500); // Increased delay for better UX
+        }, 400); // Reduced delay for faster UX
     });
 
     // Prevent scroll restoration
