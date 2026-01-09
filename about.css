@@ -475,86 +475,56 @@
     .why-grid {
         grid-template-columns: 1fr;
     }
-
-    .cta-buttons a {
-        width: 100%;
-        max-width: 100%;
-    }
 }
 
 @media (max-width: 768px) {
-    .section {
-        padding: 40px 0;
-    }
-
     .about-hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    .about-grid {
-        gap: 30px;
+    .about-hero-content p {
+        font-size: 1.1rem;
     }
 
-    .about-text {
-        font-size: 0.95rem;
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    /* Fix image grid on mobile */
     .about-image-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        grid-template-columns: 1fr;
     }
 
-    .about-img-1,
     .about-img-2 {
-        height: 250px;
-        grid-column: auto;
         margin-top: 0;
     }
 
-    /* Stats Grid */
-    .about-stats {
+    .mv-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
-        margin-top: 30px;
+        gap: 30px;
     }
 
-    .stat-item {
-        padding: 20px;
-        display: flex;
-        align-items: center;
+    .values-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
-        text-align: left;
     }
 
-    .stat-icon {
-        margin: 0;
-        width: 50px;
-        height: 50px;
-        font-size: 1.4rem;
-        flex-shrink: 0;
+    .why-number {
+        font-size: 3rem;
     }
 
-    .stat-content h3 {
+    .cta-content h2 {
         font-size: 2rem;
-        margin-bottom: 0;
     }
 
-    /* Mission Vision Mobile */
-    .mv-card {
-        padding: 30px 20px;
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .mv-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-
-    .mv-card h3 {
-        font-size: 1.5rem;
+    .cta-buttons a {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
