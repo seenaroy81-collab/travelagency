@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almoued Travel - The Destination Expertz</title>
+    <meta name="description"
+        content="Leading travel company with strong presence in GCC and India. Complete travel management from planning to execution.">
+
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loader">
+            <img src="./images/New Logo white llc.png" alt="Almoued Travel Logo" class="loader-logo-image">
+            <div class="loader-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container" data-aos="fade-right" data-aos-duration="800">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="Almoued Travel - The Destination Expertz" class="logo-image">
+                </a>
+            </div>
+
+            <ul class="nav-menu" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="team.html" class="nav-link">Core Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <a href="contact.html" class="cta-btn" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                <span>Get Started</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="./images/freepik__cinematic-4k-aerial-drone-footage-transitioning-th__80630.mp4"
+                    type="video/mp4">
+                <img src="./images/freepik__cinematic-4k-aerial-drone-footage-transitioning-th__80630.mp4"
+                    alt="Travel Background">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Welcome to Almoued Travel</span>
+                </div>
+
+                <h1 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000">
+                    A Journey Has The Potential To <span class="highlight">Enhance The Beauty</span> Of Our Life
+                </h1>
+
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                    At Almoued Travel, we believe that every journey creates lasting memories. Connect with our
+                    experienced travel professionals who understand your unique travel needs and make your dreams come
+                    true.
+                </p>
+
+                <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">
+                    <a href="destinations.html" class="btn-primary">
+                        <span>Discover Destinations</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        <span>Book Your Trip</span>
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+
+                <div class="floating-elements">
+                    <div class="floating-element" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1600">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="floating-element" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1800">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="floating-element" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2000">
+                        <i class="fas fa-suitcase-rolling"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2200">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="reviews-section" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <div class="stars">
+                            <i class="fas fa-star" data-aos="zoom-in" data-aos-delay="300"></i>
+                            <i class="fas fa-star" data-aos="zoom-in" data-aos-delay="400"></i>
+                            <i class="fas fa-star" data-aos="zoom-in" data-aos-delay="500"></i>
+                            <i class="fas fa-star" data-aos="zoom-in" data-aos-delay="600"></i>
+                            <i class="fas fa-star" data-aos="zoom-in" data-aos-delay="700"></i>
+                        </div>
+                        <p class="review-text">Customer Reviews <strong class="counter"
+                                data-target="15000">15000+</strong></p>
+                        <div class="avatars">
+                            <div class="avatar" data-aos="flip-left" data-aos-delay="800"></div>
+                            <div class="avatar" data-aos="flip-left" data-aos-delay="900"></div>
+                            <div class="avatar" data-aos="flip-left" data-aos-delay="1000"></div>
+                            <div class="avatar" data-aos="flip-left" data-aos-delay="1100"></div>
+                            <div class="avatar plus" data-aos="flip-left" data-aos-delay="1200">15k</div>
+                        </div>
+                    </div>
+
+                    <div class="therapy-images">
+                        <div class="therapy-image-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <img src="./images/ab2.jpg" alt="Office Building">
+                            <div class="image-overlay">
+                                <i class="fas fa-building"></i>
+                                <span>Our Office</span>
+                            </div>
+                        </div>
+                        <div class="therapy-image-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <img src="./images/ab3.jpg" alt="Team Working">
+                            <div class="image-overlay">
+                                <i class="fas fa-users"></i>
+                                <span>Our Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="section-header">
+                        <div class="section-label" data-aos="fade-up" data-aos-duration="600">ABOUT US</div>
+                        <h2 class="section-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                            Welcome To <span class="highlight">Al Moued Travel </span>
+                        </h2>
+
+                    </div>
+
+                    <p class="about-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        Almoued Travel is the leading travel company with strong presence in GCC and India. We offer a
+                        complete travel management, everything from planning to execution of tours. Almoued has carved a
+                        niche for itself within a short span of time through uncompromising standards in quality of
+                        services and selection of associates.
+                    </p>
+                    <p class="about-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        Implementation of innovative strategies, strong commitment, and an insatiable quest for success
+                        coupled with highly motivated professional team, helped Almoued to seek new horizons in the
+                        travel industry and beyond. Our core strength is our well trained qualified and experienced team
+                        efficient to meet the complexities of the travel and tour services and managements
+                    </p>
+                    <p class="about-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        Our strong mission to offer quality and standard services to our customer fulfilled by our team
+                        has earned a niche brand name for our products and services
+                    </p>
+                    <p class="about-description" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                        Almoued has partnered with globally best products and service suppliers providing a
+                        multi-Product platform, which will cater every need of customer. We endeavor to keep on
+                        improving our Portfolios and service recognizing and understanding the needs and demands of the
+                        market
+                    </p>
+
+                    <div class="mission-section">
+                        <h3 data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">We are a community-driven
+                            initiative on a mission to:</h3>
+                        <div class="mission-items">
+                            <div class="mission-item" data-aos="slide-right" data-aos-duration="800"
+                                data-aos-delay="1000">
+                                <div class="mission-icon">
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                                <span>Spread travel awareness through accessible experiences</span>
+                                <div class="mission-hover-effect"></div>
+                            </div>
+                            <div class="mission-item" data-aos="slide-right" data-aos-duration="800"
+                                data-aos-delay="1200">
+                                <div class="mission-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <span>Provide world-class service through certified travel professionals</span>
+                                <div class="mission-hover-effect"></div>
+                            </div>
+                            <div class="mission-item" data-aos="slide-right" data-aos-duration="800"
+                                data-aos-delay="1400">
+                                <div class="mission-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <span>Create memorable experiences that enhance life's beauty for everyone</span>
+                                <div class="mission-hover-effect"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="section destinations" id="destinations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <div class="section-label">DESTINATIONS</div>
+                <h2 class="section-title">
+                    Popular <span class="highlight">Destinations</span>
+                </h2>
+                <p class="section-subtitle">
+                    Explore the world's most beautiful and exciting destinations
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="./images/london.png" alt="London">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>London</h3>
+                        <p>Experience the rich history and vibrant culture of England's magnificent capital city.</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="./images/paris.jpeg" alt="Paris">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Paris</h3>
+                        <p>The city of love and lights awaits with its romantic atmosphere and world-class attractions.
+                        </p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-image">
+                        <img src="./images/dubai.jpeg" alt="Dubai">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Dubai</h3>
+                        <p>Modern luxury meets traditional charm in this spectacular desert metropolis of the UAE.</p>
+
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="./images/tokyo.jpeg" alt="Tokyo">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Tokyo</h3>
+                        <p>Discover the perfect blend of ancient traditions and cutting-edge technology in Japan's
+                            capital.</p>
+
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="./images/singapore.jpeg" alt="Singapore">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Singapore</h3>
+                        <p>The Garden City offers incredible diversity, amazing food, and stunning urban landscapes.</p>
+
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-image">
+                        <img src="./images/newyork.jpeg" alt="New York">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>New York</h3>
+                        <p>The city that never sleeps offers endless possibilities and iconic experiences for every
+                            traveler.</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <div class="section-label">SERVICES</div>
+                <h2 class="section-title">
+                    Our <span class="highlight">Services</span>
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive travel solutions tailored to your unique needs
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <span>Air Tickets</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <span>Global Visa Services</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <span>Hotel Bookings</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <span>Euro Rail Bookings</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <span>Group Departures</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="700">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <span>Inside Airport Assistance</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <span>MICE</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <span>Travel Medical Insurance</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <span>Passport Assistance</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <span>Umrah Assistance</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span>Car Rental Services - Worldwide</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="700">
+                    <div class="service-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <span>Airport - Hotel Transfers Worldwide</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <span>Holiday Packages</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <span>Corporate Travel Assistance</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <span>Document Attestation</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <span>Private Jet Booking</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span>Students Tours / Study Tours</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+
+                <div class="service-stat-card" data-aos="slide-right" data-aos-duration="800" data-aos-delay="700">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <span>Medical and Ayurvedha Tours</span>
+                    <div class="service-hover-effect"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Tour Packages Section -->
+    <section class="section packages" id="packages">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <div class="section-label">PACKAGES</div>
+                <h2 class="section-title">
+                    Tour <span class="highlight">Packages</span>
+                </h2>
+                <p class="section-subtitle">
+                    Specially designed travel packages for unforgettable experiences
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="./images/European Discovery.jpeg" alt="European Discovery">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>European Discovery</h3>
+                        <p>14-day comprehensive tour covering London, Paris, Rome, and Amsterdam with luxury
+                            accommodations.</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="./images/Dubai Explorer.jpeg" alt="Dubai Explorer">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Dubai Explorer</h3>
+                        <p>7-day luxury package featuring desert safari, city tours, shopping, and exclusive dining
+                            experiences.</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-image">
+                        <img src="./images/Asian Adventure.jpeg" alt="Asian Adventure">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Asian Adventure</h3>
+                        <p>12-day cultural journey through Thailand, Singapore, and Malaysia with guided tours and
+                            experiences.</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="./images/ummrah.jpeg" alt="Umrah Premium">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Umrah Premium</h3>
+                        <p>Sacred pilgrimage package with VIP services, 5-star accommodations, and spiritual guidance.
+                        </p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="./images/family.jpeg" alt="Family Getaway">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Family Getaway</h3>
+                        <p>10-day family-friendly package to Turkey and Switzerland with activities for all age groups.
+                        </p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-image">
+                        <img src="./images/honemoon.jpeg" alt="Honeymoon Special">
+
+                    </div>
+                    <div class="service-content">
+                        <h3>Honeymoon Special</h3>
+                        <p>Romantic 8-day package to Maldives or Bali with private villas, spa treatments, and exclusive
+                            dining.</p>
+                        <div class="service-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Team Section (Feme "How It Works" Style) -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <div class="section-label">CORE TEAM</div>
+                <h2 class="section-title">
+                    Our <span class="highlight">Leadership</span>
+                </h2>
+                <p class="section-subtitle">
+                    Meet the experienced professionals leading Almoued Travel to excellence
+                </p>
+            </div>
+
+            <div class="process-steps">
+                <!-- Animated Path -->
+                <svg class="process-path" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                    <path class="path-line" d="M 50 100 Q 300 50 550 100 T 1050 100" stroke="url(#gradient)"
+                        stroke-width="3" fill="none" stroke-dasharray="10,5" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#fea300;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#009af0;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#fea300;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="step-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                    <div class="step-number">
+                        <span>01</span>
+                        <div class="step-pulse"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Mohamed Aneesh</h3>
+                        <p class="team-role">Chief Managing Director</p>
+                        <p>Leading our vision with 15+ years of travel industry expertise and strategic leadership.</p>
+                    </div>
+                    <div class="step-decoration">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                    <div class="step-number">
+                        <span>02</span>
+                        <div class="step-pulse"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Haseeb</h3>
+                        <p class="team-role">Chief Operating Officer</p>
+                        <p>Ensuring seamless operations and exceptional service delivery across all departments.</p>
+                    </div>
+                    <div class="step-decoration">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
+                    <div class="step-number">
+                        <span>03</span>
+                        <div class="step-pulse"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Younus</h3>
+                        <p class="team-role">Chief Financial Officer</p>
+                        <p>Managing financial strategies and ensuring sustainable growth for the company.</p>
+                    </div>
+                    <div class="step-decoration">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1200">
+                    <div class="step-number">
+                        <span>04</span>
+                        <div class="step-pulse"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Ali Mon</h3>
+                        <p class="team-role">Chief Executive Officer</p>
+                        <p>Driving innovation and maintaining our commitment to exceptional travel experiences.</p>
+                    </div>
+                    <div class="step-decoration">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="appointment-form">
+                            <div class="form-row">
+                                <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                                    <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                                        required>
+                                    <div class="input-highlight"></div>
+                                </div>
+                                <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                                    <div class="input-highlight"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                <div class="input-highlight"></div>
+                            </div>
+
+                            <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)">
+                                <div class="input-highlight"></div>
+                            </div>
+
+                            <div class="form-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="How can we help you? Tell us about your travel needs or any questions you have..."
+                                    required></textarea>
+                                <div class="input-highlight"></div>
+                            </div>
+
+                            <button type="submit" class="submit-btn" data-aos="fade-up" data-aos-duration="600"
+                                data-aos-delay="700">
+                                <span>Send Message</span>
+                                <div class="submit-ripple"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="section-header">
+                        <div class="section-label">CONTACT US</div>
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="contact-description">
+                            Ready to take the first step? We're here to support you on your travel journey.
+                        </p>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="400">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>Musaffah - Shabiya ME-11,<br>Abu Dhabi, UAE</p>
+                            </div>
+                            <div class="contact-ripple"></div>
+                        </div>
+
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="500">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+971 4 123 4567</p>
+                            </div>
+                            <div class="contact-ripple"></div>
+                        </div>
+
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="600">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@almouedtravel.com</p>
+                            </div>
+                            <div class="contact-ripple"></div>
+                        </div>
+
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="650">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+971 4 123 4567</p>
+                            </div>
+                            <div class="contact-ripple"></div>
+                        </div>
+
+                        <div class="contact-item" data-aos="slide-left" data-aos-duration="600" data-aos-delay="700">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Working Hours</h4>
+                                <p>Mon-Fri: 9AM-6PM<br>Sat-Sun: Closed</p>
+                            </div>
+                            <div class="contact-ripple"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Clean White Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo Section -->
+                <div class="footer-section footer-logo-section">
+                    <div class="footer-logo">
+                        <img src="./images/New Logo white llc.png" alt="Almoued Travel Logo" class="footer-logo-image">
+
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/almouedtravel" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/almouedtravel" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/almouedtravel" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/almouedtravel" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@almouedtravel" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="team.html">Core Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Air Tickets</a></li>
+                        <li><a href="service-details.html?service=visa">Global Visa Services</a></li>
+                        <li><a href="services.html">Hotel Bookings</a></li>
+                        <li><a href="packages.html">Holiday Packages</a></li>
+                        <li><a href="services.html">Umrah Assistance</a></li>
+                        <li><a href="services.html">Corporate Travel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Support -->
+                <div class="footer-section">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Musaffah - Shabiya ME-11,<br>Abu Dhabi, UAE</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+971 4 123 4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@almouedtravel.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2024 Almoued Travel. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+        <div class="back-to-top-ripple"></div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971412345678?text=Hello%20Almoued%20Travel!%20I%20would%20like%20to%20inquire%20about%20your%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+        data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1000">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+        <div class="whatsapp-pulse"></div>
+    </a>
+
+    <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

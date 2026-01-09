@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Almoued Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container" data-aos="fade-right" data-aos-duration="800">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="Almoued Travel" class="logo-image" />
+        </a>
+      </div>
+      <ul class="nav-menu" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="packages.html" class="nav-link">Packages</a></li>
+        <li><a href="team.html" class="nav-link">Core Team</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="cta-btn" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+        <span>Get Started</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="./images/ab5.png" alt="Our Services" />
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-badge">
+        <i class="fas fa-star"></i>
+        <span>World Class Services</span>
+      </div>
+      <h1>Experience <span class="highlight">Seamless Travel</span></h1>
+      <p>
+        From flight bookings to luxury accommodations, we handle every detail
+        so you can focus on making memories.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <div class="section-label">SERVICES</div>
+        <h2 class="section-title">
+          Our <span class="highlight">Services</span>
+        </h2>
+        <p class="section-subtitle">
+          Comprehensive travel solutions tailored to your unique needs
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Air Tickets -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=air-tickets'"
+          data-aos="fade-up" data-aos-duration="800">
+          <div class="service-card-image">
+            <img src="./images/airticket.jpg" alt="Air Tickets" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon"><i class="fas fa-plane"></i></div>
+            <h3>Air Tickets</h3>
+            <p>
+              Best deals on international and domestic flights with premium
+              support.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Visa -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=visa'" data-aos="fade-up"
+          data-aos-duration="800" data-aos-delay="100">
+          <div class="service-card-image">
+            <img src="./images/ab2.jpg" alt="Global Visa Services" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-passport"></i>
+            </div>
+            <h3>Global Visa Services</h3>
+            <p>
+              Expert assistance for visa applications worldwide with high
+              success rates.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel Bookings -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=hotels'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-card-image">
+            <img src="./images/hotelbooking.jpg" alt="Hotel Bookings" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon"><i class="fas fa-hotel"></i></div>
+            <h3>Hotel Bookings</h3>
+            <p>
+              Luxury to budget accommodations at unbeatable prices globally.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Euro Rail -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=euro-rail'"
+          data-aos="fade-up" data-aos-duration="800">
+          <div class="service-card-image">
+            <img src="./images/eurorail.jpg" alt="Euro Rail Bookings" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon"><i class="fas fa-train"></i></div>
+            <h3>Euro Rail Bookings</h3>
+            <p>
+              Seamless train travel across Europe with improved connectivity.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group Departures -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=group-tours'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="service-card-image">
+            <img src="./images/group.jpg" alt="Group Departures" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon"><i class="fas fa-users"></i></div>
+            <h3>Group Departures</h3>
+            <p>
+              Organized group tours with expert guides and planned
+              itineraries.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Airport Assistance -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=airport-assist'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-card-image">
+            <img src="./images/airportassistance.jpg" alt="Airport Assistance" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-concierge-bell"></i>
+            </div>
+            <h3>Airport Assistance</h3>
+            <p>
+              VIP meet and greet services for a hassle-free airport
+              experience.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- MICE -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=mice'" data-aos="fade-up"
+          data-aos-duration="800">
+          <div class="service-card-image">
+            <img src="./images/mice.jpg" alt="MICE" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>MICE</h3>
+            <p>
+              Meetings, Incentives, Conferences, and Exhibitions management.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel Insurance -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=insurance'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="service-card-image">
+            <img src="./images/privacy.jpeg" alt="Travel Insurance" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Travel Insurance</h3>
+            <p>
+              Comprehensive medical and travel insurance for your peace of
+              mind.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passport Assistance -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=passport'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-card-image">
+            <img src="./images/passportassistance.jpg" alt="Passport Assistance" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3>Passport Assistance</h3>
+            <p>
+              New passport applications and renewals made simple and fast.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Umrah -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=umrah'"
+          data-aos="fade-up" data-aos-duration="800">
+          <div class="service-card-image">
+            <img src="./images/ummrah.jpeg" alt="Umrah Assistance" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon"><i class="fas fa-pray"></i></div>
+            <h3>Umrah Assistance</h3>
+            <p>
+              Complete Umrah packages including visa, transport, and
+              accommodation.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car Rental -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=carrental'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="service-card-image">
+            <img src="./images/carrental.jpg" alt="Car Rental" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon"><i class="fas fa-car"></i></div>
+            <h3>Car Rental</h3>
+            <p>
+              Premium car rentals available worldwide at competitive rates.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transfers -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=transfers'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-card-image">
+            <img src="./images/singapore.jpeg" alt="Global Transfers" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-shuttle-van"></i>
+            </div>
+            <h3>Global Transfers</h3>
+            <p>
+              Reliable airport to hotel transfers in major cities worldwide.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Holiday Packages -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=holiday'"
+          data-aos="fade-up" data-aos-duration="800">
+          <div class="service-card-image">
+            <img src="./images/family.jpeg" alt="Holiday Packages" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-umbrella-beach"></i>
+            </div>
+            <h3>Holiday Packages</h3>
+            <p>
+              Customized holiday packages for families, couples, and solo
+              travelers.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=corporate'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="service-card-image">
+            <img src="./images/ab1.jpg" alt="Corporate Travel" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Corporate Travel</h3>
+            <p>
+              Dedicated corporate travel management for seamless business
+              trips.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attestation -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=attestation'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-card-image">
+            <img src="./images/terms.jpeg" alt="Document Attestation" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Document Attestation</h3>
+            <p>
+              Fast and secure document attestation services for all your
+              needs.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Private Jet -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=private-jet'"
+          data-aos="fade-up" data-aos-duration="800">
+          <div class="service-card-image">
+            <img src="./images/privatejet.jpg" alt="Private Jet" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <h3>Private Jet</h3>
+            <p>
+              Exclusive private jet charters for ultimate luxury and privacy.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Tours -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=student-tours'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="service-card-image">
+            <img src="./images/studenttour.jpg" alt="Student Tours" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Student Tours</h3>
+            <p>
+              Educational and fun study tours designed for students and
+              institutions.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medical Tours -->
+        <div class="service-card-premium" onclick="location.href='service-details.html?service=medical'"
+          data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="service-card-image">
+            <img src="./images/medicaltourism.png" alt="Medical Support" />
+          </div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-icon">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>Medical Tourism</h3>
+            <p>
+              Specialized medical tourism and ayurveda packages for wellness.
+            </p>
+            <div class="service-card-action">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section about-cta">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>Ready for Your Next Trip?</h2>
+        <p>
+          Contact our experts to get the best deals on flights, hotels, and
+          more.
+        </p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary" style="background: white; color: #009af0">
+            <span>Get a Quote</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-logo-section">
+          <div class="footer-logo">
+            <img src="./images/New Logo white llc.png" alt="Almoued Travel Logo" class="footer-logo-image" />
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="team.html">Core Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html">Air Tickets</a></li>
+            <li><a href="service-details.html?service=visa">Global Visa Services</a></li>
+            <li><a href="services.html">Hotel Bookings</a></li>
+            <li><a href="packages.html">Holiday Packages</a></li>
+            <li><a href="services.html">Umrah Assistance</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-contact">
+          <h4>Contact Info</h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Musaffah - Shabiya ME-11,<br />Abu Dhabi, UAE</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>+971 4 123 4567</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>info@almouedtravel.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Almoued Travel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+    <div class="back-to-top-ripple"></div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/971412345678?text=Hello%20Almoued%20Travel!" class="whatsapp-float" target="_blank"
+    rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+    <div class="whatsapp-pulse"></div>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

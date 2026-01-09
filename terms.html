@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Almoued Travel</title>
+    <meta name="description" content="Terms and Conditions for Almoued Travel - Read our booking terms, payment policies, and travel conditions.">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Using Almoued Travel Design System */
+        :root {
+            --orange: #fea300;
+            --blue: #009af0;
+            --white: #ffffff;
+            --dark: #1a1a1a;
+            --gray: #666;
+            --light-gray: #f8f9fd;
+            --purple: #6B46C1;
+            --pink: #EC4899;
+            --logo-orange: #ff8c00;
+            --logo-blue: #1e90ff;
+            --logo-gradient: linear-gradient(135deg, #ff8c00 0%, #1e90ff 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 14.4px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            font-weight: 400;
+            font-size: 12.6px;
+            background: var(--light-gray);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--orange), var(--blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--logo-orange);
+            background: rgba(255, 140, 0, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.144), rgba(30, 143, 255, 0.08)),
+                        url('./images/terms.jpeg') center/cover;
+            z-index: 1;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+            background-size: 60px 60px;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .floating-element {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 72px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Warning Notice */
+        .warning-notice {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 140, 0, 0.1));
+            border: 2px solid rgba(255, 140, 0, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+        }
+
+        .warning-notice::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff4500, var(--logo-orange), #ff4500);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .warning-notice h3 {
+            color: #ff4500;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .warning-notice p {
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terms-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--logo-gradient);
+        }
+
+        .terms-section {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 2px solid #f0f0f0;
+            position: relative;
+        }
+
+        .terms-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--logo-gradient);
+            color: white;
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 18px;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+            position: relative;
+        }
+
+        .section-number::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+            line-height: 1.3;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--logo-gradient);
+            border-radius: 2px;
+        }
+
+        .terms-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .terms-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .terms-content li {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            font-size: 14px;
+            position: relative;
+        }
+
+        .terms-content li::marker {
+            color: var(--logo-orange);
+        }
+
+        /* Account Details Card */
+        .account-details {
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(30, 144, 255, 0.1));
+            border: 2px solid rgba(255, 140, 0, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .account-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--logo-gradient);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .account-details h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .account-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .account-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 140, 0, 0.2);
+        }
+
+        .account-label {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 14px;
+        }
+
+        .account-value {
+            font-weight: 700;
+            color: var(--logo-orange);
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Important Notice */
+        .important-notice {
+            background: linear-gradient(135deg, rgba(220, 38, 127, 0.1), rgba(107, 70, 193, 0.1));
+            border: 2px solid rgba(220, 38, 127, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(220, 38, 127, 0.1);
+        }
+
+        .important-notice::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .important-notice p {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        /* Contact Information */
+        .contact-section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--logo-gradient);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 140, 0, 0.2);
+            border-color: rgba(255, 140, 0, 0.3);
+            background: white;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--logo-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+        }
+
+        .contact-details h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Back to Website Button */
+        .back-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--logo-gradient);
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 140, 0, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-section {
+                height: 50vh;
+                min-height: 400px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .terms-content {
+                padding: 2rem;
+            }
+
+            .contact-section {
+                padding: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .account-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-number {
+                margin-bottom: 1rem;
+                margin-right: 0;
+            }
+
+            .floating-elements {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .hero-content {
+                padding: 0 1rem;
+            }
+
+            .terms-content {
+                padding: 1.5rem;
+            }
+
+            .contact-section {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 1rem;
+            }
+
+            .warning-notice,
+            .account-details,
+            .important-notice {
+                padding: 1.5rem;
+            }
+
+            .section-number {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light-gray);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--logo-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, var(--logo-blue), var(--logo-orange));
+        }
+
+        ::selection {
+            background: rgba(255, 140, 0, 0.3);
+            color: var(--dark);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="./images/logo.png" alt="Almoued Travel - The Destination Expertz" class="logo-image">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-arrow-left"></i> Back to Website
+                </a>
+                <a href="#contact-info" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-pattern"></div>
+        
+        <div class="floating-elements">
+            <div class="floating-element">
+                <i class="fas fa-file-contract"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-scroll"></i>
+                <span>Legal Documentation</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Terms & <span style="color: #ffd700;">Conditions</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Please read these terms and conditions carefully before booking your travel arrangements with Almoued Travel. Your journey begins with transparency.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <!-- Warning Notice -->
+            <div class="warning-notice fade-in">
+                <h3><i class="fas fa-exclamation-triangle"></i> Please Read Carefully</h3>
+                <p>The Almoued Travel Private Ltd ('the Company', 'we', 'us' and 'our') accepts bookings subject to the following conditions. We want to inform that these conditions will be applicable only for tour arrangements booked by the clients with the company. Once you book your tickets with us, it means that you have accepted our terms and conditions in a correct manner. All references in these conditions such as "booking", "tour" or arrangements means the tour arrangements and does not specify anything particular. Please ensure to read over the terms and conditions on our website to get a clear idea of the respective rights.</p>
+            </div>
+
+            <!-- Terms and Conditions Content -->
+            <div class="terms-content fade-in">
+                <!-- Section 1 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">1</div>
+                        <h2 class="section-title">Your Tour Contract</h2>
+                    </div>
+                    <p>The contract placed between the Client and Company (between "you" and "our company") is important to us. We assure that the contract placed between us will not be revealed to any of the private third parties. Almoued Travel will stand with their customers in matters of any dispute, claim or any disputes arise between us. However, we are not responsible for the problems caused in your own matters or personal. No employee in the company other than the director of Almoued Travel has the right to vary or omit any of these terms. No promises will be offered for discounts and promotions unless it is made in written form.</p>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">2</div>
+                        <h2 class="section-title">Secure your Booking</h2>
+                    </div>
+                    <p>To secure the booking, Almoued Travel requests the customers to pay an amount for minimum deposit. This is mandatory for all the tour packages and sometimes high deposit amount will be asked to cover payment conditions. You need to read over the booking conditions and general information of the tour packages selected. Any doubts regarding the booking process can be cleared over the phone or you can send an email to info@almouedtravel.com. The tour company shall assist you in any kind of tour related matters.</p>
+                </div>
+
+                <!-- Section 3 -->
+                <!-- <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2 class="section-title">Payment for your Tour</h2>
+                    </div>
+                    <p>After the deposit, you are required to pay the balance amount within a period of one week. In certain cases, the people would be asked to deposit the full payment at an earlier stage before the start of the holiday. The "balance due date" will be estimated to the customer at the time of direct contact in our office or through email. In case of non-payment, the tour company has the right to cancel your booking at any point of time.</p>
+
+                    <div class="account-details">
+                        <h4><i class="fas fa-university"></i> Account Details</h4>
+                        <div class="account-grid">
+                            <div class="account-item">
+                                <span class="account-label">Account Number:</span>
+                                <span class="account-value">10210663291001 </span>
+                            </div>
+                            <div class="account-item">
+                                <span class="account-label">Account Name:</span>
+                                <span class="account-value">AL MOUED TRAVEL </span>
+                            </div>
+                            <div class="account-item">
+                                <span class="account-label">Bank Name:</span>
+                                <span class="account-value"> ADCB Bank</span>
+                            </div>
+                            <div class="account-item">
+                                <span class="account-label">SWIFT Code:</span>
+                                <span class="account-value">ADCBAEAA</span>
+                            </div>
+                            <div class="account-item">
+                                <span class="account-label">Currency:</span>
+                                <span class="account-value">AED</span>
+                            </div>
+                            <div class="account-item">
+                                <span class="account-label">Account Type:</span>
+                                <span class="account-value">CURRENT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="important-notice">
+                        <p><i class="fas fa-shield-alt"></i> All payments should be made against this account only and not to any other accounts or digital payment numbers.</p>
+                    </div>
+                </div> -->
+
+                <!-- Section 4 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2 class="section-title">Change in Booking</h2>
+                    </div>
+                    <p>If you are interested to make any changes in the booking, then you are requested to directly visit our branch office with your receipts. The changes will be made on the basis of certain emergency conditions alone. We do not entertain the people to make repeated changes. Minor changes will only be allowed. It will be applicable only under certain conditions.</p>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">4</div>
+                        <h2 class="section-title">Cancellation of Booking</h2>
+                    </div>
+                    <p>Cancellation of booking is allowed in our tour company. But, it merely depends upon the situation. You have the right to cancel the tickets provided under certain circumstances. You need to inform us through call or email before a stipulated period of time. Cancellation charges will be imposed for the customers in few cases. It is important to know that the amount paid will not be refunded at any cost.</p>
+                </div>
+
+                <!-- Section 6 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">5</div>
+                        <h2 class="section-title">Complaints</h2>
+                    </div>
+                    <p>If you have any complaints regarding the holiday arrangements, then you have the right to complain to us at info@almouedtravel.com. We are eager to hear your complaints and solve to the best extent. You can specify the type of complaint in the mail and send us. Our customer service team will look at the issue and get back to you in a period of 24 hours.</p>
+                </div>
+
+                <!-- Section 7 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">6</div>
+                        <h2 class="section-title">Our Responsibility for your Tour</h2>
+                    </div>
+                    <p>We ensure to arrange each of the holiday arrangements with great care and attention. Almoued Travel is responsible for our employees, agents and suppliers at the course of travel. Other than that, we are not responsible for any criminal or violent act that takes place during the time of travel. You should act diligently and enjoy your holiday trip. We advise to stay away from all kind of illegal activities in your journey.</p>
+                </div>
+
+                <!-- Section 8 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">7</div>
+                        <h2 class="section-title">Brochure/ Website/ Advertising</h2>
+                    </div>
+                    <p>The information contained in our website, brochure, itineraries and other advertising material is believed to be clear and understandable for all the visitors. However, there may be errors occasionally and information may be changed at any time. We request all our customers to check out the terms and conditions before at the time of booking. If you find anything complicated, please drop a mail to us at info@almouedtravel.com</p>
+                </div>
+
+                <!-- Section 9 -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <div class="section-number">8</div>
+                        <h2 class="section-title">No Smoking Policy</h2>
+                    </div>
+                    <p>We request all our customers to stay away from smoking at the time of travel. Smoking can really kill the lives of you and others. We do not permit our customers to smoke in the vehicles.</p>
+                </div>
+
+                <!-- Final Notice -->
+                <div class="important-notice">
+                    <p><i class="fas fa-check-circle"></i> Please read over the terms and conditions as they are set to our respective rights. Accepting our terms and conditions can offer a safe journey.</p>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section fade-in" id="contact-info">
+                <h2 style="text-align: center; margin-bottom: 2rem; margin-top: 0; font-size: 2rem; color: var(--dark);">
+                    <i class="fas fa-headset"></i> Contact Us for Support
+                </h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Support</h4>
+                            <p>info@almouedtravel.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Support</h4>
+                            <p>+971 4 123 4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Our Office</h4>
+                            <p>Musaffah - Shabiya ME-11,<br>Abu Dhabi, UAE</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Mon-Fri: 9AM-6PM<br>Sat-Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Website Button -->
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-home"></i>
+        <span>Back to Website</span>
+    </a>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.terms-section, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Add hover effects to contact items and account items
+        document.querySelectorAll('.contact-item, .account-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                if (this.classList.contains('contact-item')) {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                } else {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                }
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Floating elements animation
+        const floatingElements = document.querySelectorAll('.floating-element');
+        floatingElements.forEach((element, index) => {
+            element.style.animationDelay = `${index * 2}s`;
+        });
+
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBackground = document.querySelector('.hero-background');
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        console.log('📋 Almoued Travel Terms and Conditions page loaded successfully!');
+    </script>
+</body>
+
+</html>

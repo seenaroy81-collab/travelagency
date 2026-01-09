@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details - Almoued Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        .service-body {
+            padding: 80px 0;
+        }
+
+        .service-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .service-main img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-main h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .service-main p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .feature-list {
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            color: #009af0;
+            font-size: 1.2rem;
+        }
+
+        .sidebar-widget {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .widget-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .other-services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .other-services-list li a {
+            display: block;
+            padding: 12px 0;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .other-services-list li a:hover {
+            color: #009af0;
+            padding-left: 5px;
+        }
+
+        .contact-widget {
+            text-align: center;
+            background: linear-gradient(135deg, #009af0 0%, #fea300 100%);
+            color: white;
+        }
+
+        .contact-widget h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-widget .btn-primary {
+            background: white;
+            color: #009af0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .service-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="Almoued Travel" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="team.html" class="nav-link">Core Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img id="heroImage" src="" alt="Destination Hero">
+        </div>
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1 id="serviceTitle">Loading...</h1>
+            <p id="serviceSubtitle">Please wait while we load the details</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="service-body">
+        <div class="container">
+            <div class="service-layout">
+                <main class="service-main" data-aos="fade-up">
+                    <h2 id="mainHeading">Overview</h2>
+                    <p id="serviceDescription">Detailed description goes here...</p>
+
+                    <h3>Highlights</h3>
+                    <div class="feature-list" id="featureList">
+                        <!-- Highlights populated by JS -->
+                    </div>
+
+                    <p id="serviceConclusion"></p>
+                </main>
+
+                <aside class="sidebar" data-aos="fade-left">
+                    <div class="sidebar-widget contact-widget">
+                        <h3>Book This Trip?</h3>
+                        <p>Contact us today for a personalized itinerary.</p>
+                        <a href="contact.html" class="btn-primary">Inquire Now</a>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Other Destinations</h4>
+                        <ul class="other-services-list">
+                            <li><a href="destination-details.html?destination=london">London</a></li>
+                            <li><a href="destination-details.html?destination=paris">Paris</a></li>
+                            <li><a href="destination-details.html?destination=dubai">Dubai</a></li>
+                            <li><a href="destination-details.html?destination=tokyo">Tokyo</a></li>
+                            <li><a href="destination-details.html?destination=singapore">Singapore</a></li>
+                            <li><a href="destination-details.html?destination=newyork">New York</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-logo-section">
+                    <div class="footer-logo">
+                        <img src="./images/New Logo white llc.png" alt="Almoued Travel Logo" class="footer-logo-image">
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/almouedtravel" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@almouedtravel" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="team.html">Core Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Air Tickets</a></li>
+                        <li><a href="service-details.html?service=visa">Global Visa Services</a></li>
+                        <li><a href="services.html">Hotel Bookings</a></li>
+                        <li><a href="packages.html">Holiday Packages</a></li>
+                        <li><a href="services.html">Umrah Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
+                            <p>Musaffah - Shabiya ME-11,<br>Abu Dhabi, UAE</p>
+                        </div>
+                        <div class="contact-item"><i class="fas fa-phone"></i>
+                            <p>+971 4 123 4567</p>
+                        </div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i>
+                            <p>info@almouedtravel.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Almoued Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+        <div class="back-to-top-ripple"></div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971412345678?text=Hello%20Almoued%20Travel!" class="whatsapp-float" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+        <div class="whatsapp-pulse"></div>
+    </a>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+
+        const destinationsData = {
+            'london': {
+                title: 'London, United Kingdom',
+                subtitle: 'A blend of history, culture, and modernity',
+                image: './images/london.png',
+                description: 'London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times. At its centre stand the imposing Houses of Parliament, the iconic Big Ben clock tower and Westminster Abbey, site of British monarch coronations. Across the Thames River, the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city.',
+                features: ['Big Ben & House of Parliament', 'The British Museum', 'Buckingham Palace', 'Tower of London'],
+                conclusion: 'Explore the royal heritage and vibrant street life of London.'
+            },
+            'paris': {
+                title: 'Paris, France',
+                subtitle: 'The City of Light and Love',
+                image: './images/paris.jpeg',
+                description: 'Paris, France\'s capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.',
+                features: ['Eiffel Tower', 'Louvre Museum', 'Notre-Dame Cathedral', 'Arc de Triomphe'],
+                conclusion: 'Indulge in the romance and artistic treasures of Paris.'
+            },
+            'dubai': {
+                title: 'Dubai, UAE',
+                subtitle: 'The City of Gold and Future',
+                image: './images/dubai.jpeg',
+                description: 'Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.',
+                features: ['Burj Khalifa', 'Dubai Mall', 'Palm Jumeirah', 'Desert Safari'],
+                conclusion: 'Experience the pinnacle of luxury and innovation in Dubai.'
+            },
+            'tokyo': {
+                title: 'Tokyo, Japan',
+                subtitle: 'Where tradition meets the future',
+                image: './images/tokyo.jpeg',
+                description: 'Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city’s many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).',
+                features: ['Sensō-ji Temple', 'Tokyo Skytree', 'Shibuya Crossing', 'Meiji Shrine'],
+                conclusion: 'Immerse yourself in the unique energy of Tokyo.'
+            },
+            'singapore': {
+                title: 'Singapore',
+                subtitle: 'A City in a Garden',
+                image: './images/singapore.jpeg',
+                description: 'Singapore, an island city-state off southern Malaysia, is a global financial center with a tropical climate and multicultural population. Its colonial core centers on the Padang, a cricket field since the 1830s and now flanked by grand buildings such as City Hall, with its 18 Corinthian columns. In Chinatown, the sumptuously red-and-gold Buddha Tooth Relic Temple houses one of Buddha’s teeth.',
+                features: ['Gardens by the Bay', 'Marina Bay Sands', 'Sentosa Island', 'Singapore Botanic Gardens'],
+                conclusion: 'Discover the lush greenery and diverse culture of Singapore.'
+            },
+            'newyork': {
+                title: 'New York City, USA',
+                subtitle: 'The City That Never Sleeps',
+                image: './images/newyork.jpeg',
+                description: 'New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.',
+                features: ['Statue of Liberty', 'Central Park', 'Times Square', 'Empire State Building'],
+                conclusion: 'Feel the pulse of the world in New York City.'
+            }
+        };
+
+        function loadDestinationDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const destinationId = urlParams.get('destination');
+            const data = destinationsData[destinationId];
+
+            if (data) {
+                document.getElementById('serviceTitle').textContent = data.title;
+                document.getElementById('serviceSubtitle').textContent = data.subtitle;
+                document.getElementById('serviceDescription').textContent = data.description;
+                document.getElementById('mainHeading').textContent = 'Welcome to ' + data.title.split(',')[0];
+                document.getElementById('heroImage').src = data.image;
+                document.getElementById('serviceConclusion').textContent = data.conclusion;
+
+                const featureList = document.getElementById('featureList');
+                featureList.innerHTML = data.features.map(feature => `
+                    <div class="feature-item">
+                        <i class="fas fa-map-marker-alt feature-icon"></i>
+                        <span>${feature}</span>
+                    </div>
+                `).join('');
+            } else {
+                document.getElementById('serviceTitle').textContent = 'Destination Not Found';
+                document.getElementById('serviceSubtitle').textContent = 'Please check the URL or return to Destinations page.';
+                document.getElementById('mainHeading').style.display = 'none';
+                document.getElementById('heroImage').src = './images/ab4.jpeg'; // Fallback
+            }
+        }
+
+        window.onload = loadDestinationDetails;
+    </script>
+</body>
+
+</html>
