@@ -37,6 +37,17 @@
         font-size: 2.2rem;
     }
 
+    /* Hide JS/Hero Badge on mobile as requested */
+    .page-hero-badge {
+        display: none !important;
+    }
+
+    .page-hero-bg img {
+        object-position: center center !important;
+        width: 100%;
+        height: 100%;
+    }
+
     /* Grids to Single Column */
     .about-grid,
     .about-stats,
