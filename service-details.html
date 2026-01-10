@@ -11,131 +11,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="details.css" /> <!-- New Premium Details Styles -->
   <link rel="stylesheet" href="mobile-rectification.css" />
-  <style>
-    .service-body {
-      padding: 80px 0;
-    }
-
-    .service-layout {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 50px;
-    }
-
-    .service-main img {
-      width: 100%;
-      border-radius: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-main h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #1a1a1a;
-    }
-
-    .service-main p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    .feature-list {
-      margin: 30px 0;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-      background: #f9f9f9;
-      padding: 15px 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .feature-item:hover {
-      transform: translateX(10px);
-      background: white;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .feature-icon {
-      color: #009af0;
-      font-size: 1.2rem;
-    }
-
-    .sidebar-widget {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      margin-bottom: 30px;
-      border: 1px solid #f0f0f0;
-    }
-
-    .widget-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #f0f0f0;
-    }
-
-    .other-services-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .other-services-list li a {
-      display: block;
-      padding: 12px 0;
-      color: #666;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      border-bottom: 1px solid #f9f9f9;
-    }
-
-    .other-services-list li a:hover {
-      color: #009af0;
-      padding-left: 5px;
-    }
-
-    .contact-widget {
-      text-align: center;
-      background: linear-gradient(135deg, #009af0 0%, #fea300 100%);
-      color: white;
-    }
-
-    .contact-widget h3 {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    .contact-widget .btn-primary {
-      background: white;
-      color: #009af0;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .service-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        order: -1;
-      }
-    }
-  </style>
 </head>
 
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -156,16 +41,18 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <!-- Hero Section -->
+  <!-- Parallax Hero Section -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img id="heroImage" src="" alt="Service Hero" />
+      <img id="heroImage" src="" alt="Service Hero" style="opacity: 0; transition: opacity 0.5s ease;" />
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
-      <h1 id="serviceTitle">Loading...</h1>
-      <p id="serviceSubtitle">Please wait while we load the details</p>
+      <h1 id="serviceTitle"><span class="skeleton skeleton-title" style="width: 300px; display: inline-block;"></span>
+      </h1>
+      <p id="serviceSubtitle">
+        <span class="skeleton skeleton-text" style="width: 200px; display: inline-block;"></span>
+      </p>
     </div>
   </section>
 
@@ -174,8 +61,12 @@
     <div class="container">
       <div class="service-layout">
         <main class="service-main" data-aos="fade-up">
-          <h2 id="mainHeading">Overview</h2>
-          <p id="serviceDescription">Detailed description goes here...</p>
+          <h2 id="mainHeading"><span class="skeleton skeleton-title" style="width: 50%;"></span></h2>
+          <p id="serviceDescription">
+            <span class="skeleton skeleton-text"></span>
+            <span class="skeleton skeleton-text"></span>
+            <span class="skeleton skeleton-text" style="width: 80%;"></span>
+          </p>
 
           <h3>Key Features</h3>
           <div class="feature-list" id="featureList">
@@ -199,7 +90,7 @@
           <p id="serviceConclusion"></p>
         </main>
 
-        <aside class="sidebar" data-aos="fade-left">
+        <aside class="sidebar" data-aos="fade-left" data-aos-delay="200">
           <div class="sidebar-widget contact-widget">
             <h3>Need this Service?</h3>
             <p>Contact us today for a personalized quote.</p>
@@ -209,21 +100,11 @@
           <div class="sidebar-widget">
             <h4 class="widget-title">Other Services</h4>
             <ul class="other-services-list">
-              <li>
-                <a href="service-details.html?service=visa">Global Visa Services</a>
-              </li>
-              <li>
-                <a href="service-details.html?service=air-tickets">Air Tickets</a>
-              </li>
-              <li>
-                <a href="service-details.html?service=hotels">Hotel Bookings</a>
-              </li>
-              <li>
-                <a href="service-details.html?service=holiday">Holiday Packages</a>
-              </li>
-              <li>
-                <a href="service-details.html?service=umrah">Umrah Assistance</a>
-              </li>
+              <li><a href="service-details.html?service=visa">Global Visa Services</a></li>
+              <li><a href="service-details.html?service=air-tickets">Air Tickets</a></li>
+              <li><a href="service-details.html?service=hotels">Hotel Bookings</a></li>
+              <li><a href="service-details.html?service=holiday">Holiday Packages</a></li>
+              <li><a href="service-details.html?service=umrah">Umrah Assistance</a></li>
             </ul>
           </div>
         </aside>
@@ -244,18 +125,26 @@
   <script>
     AOS.init();
 
+    // Parallax Effect Logic
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroBg = document.querySelector('.page-hero-bg');
+      // Move slower than scroll for parallax
+      if (heroBg) heroBg.style.transform = `translateY(${scrolled * 0.4}px)`;
+    });
+
     const servicesData = {
       "air-tickets": {
-        title: "Air Ticket Booking",
-        subtitle: "Fly anywhere in the world with the best rates",
+        title: "Air Tickets & Flight Booking",
+        subtitle: "Best fares for domestic and international flights",
         image: "./images/airticket.jpg",
         description:
-          "We offer comprehensive air ticketing services for both domestic and international flights. Our team ensures you get the most convenient routes and competitive prices, whether for business or leisure.",
+          "Fly to your dream destination with ease. We offer competitive airfares for all major airlines, ensuring you get the best route and price. Whether it's a last-minute business trip or a planned family vacation, our ticketing experts handle everything from booking to meal preferences.",
         features: [
-          "Best Price Guarantee",
-          "24/7 Support",
           "Global Airline Partnerships",
-          "Group Booking Deals",
+          "24/7 Booking Support",
+          "Competitive Corporate Rates",
+          "Meal & Seat Selection",
         ],
         conclusion:
           "Let us handle your flight arrangements so you can start your journey stress-free.",
@@ -265,102 +154,103 @@
         subtitle: "Hassle-free visa processing for all major destinations",
         image: "./images/visaservice.jpg",
         description:
-          "Navigating visa requirements can be complex. Our experts provide end-to-end assistance for tourist, business, and student visas to countries like USA, UK, Canada, Europe (Schengen), and more.",
+          "Navigating visa requirements can be complex. Our experts provide end-to-end assistance for tourist, business, and student visas to countries like USA, UK, Canada, Europe (Schengen), and more. We review your documents to minimize rejection risks.",
         features: [
-          "Document Verification",
-          "Appointment Scheduling",
-          "Application Tracking",
-          "High Success Rate",
+          "Document Verification & Filling",
+          "Embassy Appointment Scheduling",
+          "Real-time Application Tracking",
+          "High Success Rate Assistance",
         ],
         conclusion:
-          "Travel the world without borders. We make the visa process simple and efficient.",
+          "Travel the world borders-free. We make the visa process simple, transparent, and efficient.",
       },
+      // ... (rest of the object keys remain the same, just keeping the structure intact)
       hotels: {
         title: "Hotel Bookings",
         subtitle: "Luxury stays and budget-friendly accommodations worldwide",
-        image: "./images/ab3.jpg",
+        image: "./images/hotelbooking.jpg",
         description:
-          "From 5-star luxury resorts to cozy boutique hotels, we provide accommodation options that suit your taste and budget. Enjoy exclusive deals and upgrades through our global network.",
+          "From 5-star luxury resorts to cozy boutique hotels, we provide accommodation options that suit your taste and budget. Enjoy exclusive deals, complimentary upgrades, and flexible cancellation policies through our global network of partners.",
         features: [
           "Instant Confirmation",
-          "Exclusive Discounts",
+          "Exclusive Member Discounts",
           "Wide Range of Options",
-          "Flexible Cancellation",
+          "Flexible Cancellation Policies",
         ],
         conclusion:
-          "Rest easy knowing your accommodation is perfectly sorted.",
+          "Rest easy knowing your accommodation is perfectly sorted before you even arrive.",
       },
       "euro-rail": {
         title: "Euro Rail Bookings",
         subtitle: "Explore Europe by train with ease",
         image: "./images/eurorail.jpg",
         description:
-          "Experience the beauty of Europe through its extensive rail network. We book Eurail passes and point-to-point tickets, ensuring a scenic and comfortable journey across the continent.",
+          "Experience the breathtaking beauty of Europe through its extensive rail network. We book official Eurail passes and point-to-point tickets, offering you the freedom to hop between Paris, Rome, Swiss Alps, and more with scenic comfort.",
         features: [
-          "Eurail Passes",
+          "Official Eurail Passes",
           "High-Speed Train Reservations",
-          "Scenic Routes",
+          "Scenic Alpine Routes",
           "Multi-Country Itineraries",
         ],
         conclusion:
-          "The best way to see Europe is by train. Let us get you on board.",
+          "The best way to see Europe is on the rails. Let us get you on board.",
       },
       "group-tours": {
         title: "Group Departures",
         subtitle: "Join our curated group tours for shared experiences",
         image: "./images/group.jpg",
         description:
-          "Our fixed departure group tours are perfect for those who love to travel with company. meticulously planned itineraries, expert guides, and all-inclusive packages make these tours popular.",
+          "Our fixed departure group tours are perfect for those who love to travel with company. Meticulously planned itineraries, expert tour managers, and all-inclusive packages make these tours popular for solo travelers and families alike.",
         features: [
-          "Expert Tour Managers",
-          "All-Inclusive Packages",
-          "Like-minded Travelers",
-          "Safe & Secure",
+          "Expert Indian/Arabic Tour Managers",
+          "All-Inclusive Packages (Meals+Stay)",
+          "Like-minded Traveler Community",
+          "Safe, Secure & Guided",
         ],
         conclusion:
-          "Make new friends and memories on our exciting group tours.",
+          "Make new friends and lifelong memories on our exciting group tours.",
       },
       "airport-assist": {
         title: "Airport Assistance",
         subtitle: "VIP Meet & Greet services for a smooth arrival/departure",
         image: "./images/airportassistance.jpg",
         description:
-          "Skip the queues and enjoy a seamless airport experience. Our meet and assist services cover fast-track immigration, porter service, and lounge access.",
+          "Skip the long queues and enjoy a seamless airport experience. Our Marhaba/Ahlan meet and assist services cover fast-track immigration, porter service for your luggage, and exclusive lounge access to relax before your flight.",
         features: [
           "Fast-Track Immigration",
-          "Porter Services",
-          "Lounge Access",
-          "Personal Escort",
+          "Dedicated Porter Services",
+          "Premium Lounge Access",
+          "Personal Escort to Gate",
         ],
         conclusion:
-          "Start your trip like a VIP with our airport assistance services.",
+          "Start your trip like a VIP with our premium airport assistance services.",
       },
       mice: {
         title: "MICE Services",
         subtitle: "Meetings, Incentives, Conferences, and Exhibitions",
         image: "./images/mice.jpg",
         description:
-          "We specialize in organizing corporate events, conferences, and incentive trips globally. From venue selection to logistics, we handle everything to ensure a successful event.",
+          "We specialize in organizing world-class corporate events, conferences, and incentive trips globally. From venue selection to logistics and gala dinners, we handle everything to ensure your business event is a roaring success.",
         features: [
-          "Venue Selection",
-          "Logistics Management",
+          "Strategic Venue Selection",
+          "End-to-End Logistics Management",
           "Team Building Activities",
-          "Custom Itineraries",
+          "Custom Corporate Itineraries",
         ],
         conclusion:
-          "Elevate your corporate events with our professional management.",
+          "Elevate your corporate profile with our professional event management.",
       },
       insurance: {
         title: "Travel Insurance",
         subtitle: "Comprehensive protection for your travels",
         image: "./images/privacy.jpeg",
         description:
-          "Travel with peace of mind. Our comprehensive travel insurance plans cover medical emergencies, trip cancellations, lost baggage, and flight delays.",
+          "Travel with absolute peace of mind. Our comprehensive travel insurance plans cover medical emergencies, trip cancellations, lost baggage, and flight delays, ensuring you are protected against the unexpected.",
         features: [
-          "Medical Coverage",
+          "COVID-19 Medical Coverage",
           "Trip Cancellation Protection",
           "Lost Baggage Assistance",
-          "24/7 Emergency Assistance",
+          "24/7 Global Emergency Assistance",
         ],
         conclusion: "Safety first. Ensure you are covered before you fly.",
       },
@@ -369,11 +259,11 @@
         subtitle: "New passports and renewal services",
         image: "./images/passportassistance.jpg",
         description:
-          "We assist with new passport applications, renewals, and damaged passport replacements. Our team guides you through the documentation and submission process.",
+          "We assist with new passport applications, renewals, and lost passport replacements. Our team guides you through the documentation, appointments, and submission process for various embassies.",
         features: [
-          "Documentation Guidance",
-          "Appointment Booking",
-          "Renewal Services",
+          "Documentation Verification",
+          "Online Appointment Booking",
+          "Renewal & Reissue Services",
           "Urgent Application Support",
         ],
         conclusion: "Your gateway to the world starts with a valid passport.",
@@ -383,12 +273,12 @@
         subtitle: "Spiritual journeys with complete peace of mind",
         image: "./images/ummrah.jpeg",
         description:
-          "Perform Umrah with ease. Our packages include visa processing, flights, hotels near the Haram, and ground transport to ensure a comfortable spiritual journey.",
+          "Perform Umrah with ease and devotion. Our tailored packages include visa processing, direct flights, hotels near the Haram, and comfortable ground transport to ensure a spiritually fulfilling journey.",
         features: [
-          "Visa Processing",
-          "Haram-view Hotels",
-          "Transportation",
-          "Ziyarat Tours",
+          "Umrah Visa Processing",
+          "Hotels close to Haram",
+          "Private/Shared Transportation",
+          "Ziyarat Tours included",
         ],
         conclusion:
           "Focus on your prayers while we take care of the logistics.",
@@ -398,26 +288,26 @@
         subtitle: "Drive your way through any destination",
         image: "./images/carrental.jpg",
         description:
-          "Rent a car anywhere in the world. From economy cars to luxury sedans, we offer reliable vehicle rental services with flexible pickup and drop-off options.",
+          "Rent a car anywhere in the world. From economy cars for city hops to luxury sedans for business, we offer reliable vehicle rental services with flexible pickup, drop-off, and insurance options.",
         features: [
           "Wide Fleet Selection",
-          "GPS & Child Seats",
+          "GPS & Child Seats Available",
           "Unlimited Mileage Options",
-          "Insurance Included",
+          "Full Insurance Coverage",
         ],
-        conclusion: "Freedom to explore at your own pace.",
+        conclusion: "Freedom to explore at your own pace, on your own terms.",
       },
       transfers: {
         title: "Global Transfers",
         subtitle: "Reliable airport-hotel transfers worldwide",
-        image: "./images/singapore.jpeg",
+        image: "./images/ab4.jpeg",
         description:
-          "Arrive in style. We provide private and shared transfers from airports to hotels in over 100 countries. Reliable, safe, and comfortable.",
+          "Arrive in style and comfort. We provide private and shared transfers from airports to hotels in over 100 countries. Reliable, safe, and pre-booked to save you from taxi queues.",
         features: [
-          "Private Chauffeurs",
-          "Shared Shuttles",
-          "Luxury Vehicles",
-          "24/7 Availability",
+          "Private Chauffeur Service",
+          "Shared Shuttle Options",
+          "Luxury Vehicle Fleet",
+          "24/7 Pickup Availability",
         ],
         conclusion:
           "No more waiting for taxis. Your ride is ready when you are.",
@@ -425,27 +315,27 @@
       holiday: {
         title: "Holiday Packages",
         subtitle: "Tailor-made holidays for families and couples",
-        image: "./images/family.jpeg",
+        image: "./images/packages.jpg",
         description:
-          "Whether it is a honeymoon, a family vacation, or a solo adventure, we craft personalized holiday packages that suit your preferences and budget.",
+          "Whether it is a romantic honeymoon, a fun-filled family vacation, or a solo adventure, we craft personalized holiday packages that suit your preferences and budget. Experience the world your way.",
         features: [
           "Customized Itineraries",
           "Honeymoon Specials",
-          "Family Friendly",
-          "Adventure Tours",
+          "Family Friendly Activities",
+          "Adventure & Leisure Tours",
         ],
-        conclusion: "Your dream holiday, planned to perfection.",
+        conclusion: "Your dream holiday, planned to perfection by experts.",
       },
       corporate: {
         title: "Corporate Travel",
         subtitle: "Business travel management solutions",
         image: "./images/ab1.jpg",
         description:
-          "We optimize your corporate travel with cost-effective solutions, policy compliance, and 24/7 support for your business travelers.",
+          "We optimize your corporate travel with cost-effective solutions, policy compliance, and 24/7 support. Let us manage your business trips so you can focus on your meetings.",
         features: [
-          "Cost Optimization",
+          "Cost Optimization Strategies",
           "Travel Policy Compliance",
-          "Reporting & Analytics",
+          "Detailed Reporting & Analytics",
           "Dedicated Account Manager",
         ],
         conclusion: "Focus on business, we handle the travel.",
@@ -455,12 +345,12 @@
         subtitle: "Certificate attestation and apostille services",
         image: "./images/terms.jpeg",
         description:
-          "We provide fast and secure attestation services for educational, marriage, and birth certificates for use in UAE and other countries.",
+          "We provide fast, secure, and reliable attestation services for educational, marriage, and birth certificates for use in UAE and other countries. We handle the bureaucracy for you.",
         features: [
-          "Embassy Attestation",
-          "MOFA Attestation",
+          "Embassy & Consulate Attestation",
+          "MOFA Attestation Services",
           "Apostille Services",
-          "Secure Handling",
+          "Secure Document Handling",
         ],
         conclusion:
           "Legally verify your documents with our trusted services.",
@@ -470,44 +360,45 @@
         subtitle: "Luxury air charter services",
         image: "./images/privatejet.jpg",
         description:
-          "Experience the ultimate in luxury and privacy with our private jet charter services. Fly on your own schedule to any destination.",
+          "Experience the ultimate in luxury, privacy, and convenience with our private jet charter services. Fly on your own schedule to any destination, bypassing commercial terminals.",
         features: [
-          "Premium Fleet",
-          "Privacy & Security",
-          "Flexible Scheduling",
-          "Onboard Catering",
+          "Premium Jet Fleet Access",
+          "Complete Privacy & Security",
+          "Flexible On-Demand Scheduling",
+          "Gourmet Onboard Catering",
         ],
-        conclusion: "Redefining luxury travel.",
+        conclusion: "Redefining luxury travel. Your jet awaits.",
       },
       "student-tours": {
         title: "Student Tours",
         subtitle: "Educational and fun trips for students",
         image: "./images/studenttour.jpg",
         description:
-          "We organize educational tours, industrial visits, and adventure camps for schools and colleges, balancing learning with fun.",
+          "We organize educational tours, industrial visits, and adventure camps for schools and colleges. We balance learning objectives with fun activities to create memorable experiences for students.",
         features: [
-          "Educational Itineraries",
-          "Safe Accommodation",
-          "Experienced Guides",
-          "Affordable Packages",
+          "Educational & Industrial Itineraries",
+          "Safe & vetted Accommodations",
+          "Experienced Student Guides",
+          "Affordable Group Packages",
         ],
-        conclusion: "Learning beyond the classroom.",
+        conclusion: "Learning beyond the classroom, exploring the world.",
       },
       medical: {
         title: "Medical Tourism",
         subtitle: "Healthcare and Ayurveda packages",
         image: "./images/medicaltourism.png",
         description:
-          "Access world-class medical treatments and rejuvenating Ayurveda therapies. We assist with hospital appointments, medical visas, and recovery stays.",
+          "Access world-class medical treatments and rejuvenating Ayurveda therapies. We assist with hospital appointments, medical visas, recovery stays, and post-treatment travel.",
         features: [
-          "Hospital Partnerships",
-          "Ayurveda Retreats",
+          "Top Hospital Partnerships",
+          "Ayurveda & Wellness Retreats",
           "Medical Visa Support",
-          "Post-treatment Care",
+          "Post-treatment Recovery Care",
         ],
-        conclusion: "Your health and wellness, our priority.",
+        conclusion: "Your health and wellness, our top priority.",
       },
     };
+
 
     const visaCountries = [
       {
@@ -569,7 +460,16 @@
 
     function loadServiceDetails() {
       const urlParams = new URLSearchParams(window.location.search);
-      const serviceId = urlParams.get("service");
+      let serviceId = urlParams.get("service");
+
+      // Default to 'visa' if no service specified to ensure page looks good
+      if (!serviceId && !servicesData[serviceId]) {
+        serviceId = 'visa';
+        // Optional: Update URL without refresh
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?service=visa';
+        window.history.replaceState({ path: newUrl }, '', newUrl);
+      }
+
       const data = servicesData[serviceId];
 
       if (data) {
@@ -577,7 +477,15 @@
         document.getElementById("serviceSubtitle").textContent = data.subtitle;
         document.getElementById("serviceDescription").textContent = data.description;
         document.getElementById("mainHeading").textContent = data.title + " Overview";
-        document.getElementById("heroImage").src = data.image;
+
+        // Handle Hero Image Fade-in
+        const heroImg = document.getElementById("heroImage");
+        heroImg.style.opacity = '0'; // Reset opacity
+        heroImg.onload = function () {
+          this.style.opacity = '1';
+        };
+        heroImg.src = data.image;
+
         document.getElementById("serviceConclusion").textContent = data.conclusion;
 
         // Handle Global Visa Service Special Case
@@ -618,6 +526,7 @@
         }
 
       } else {
+        // Fallback if random invalid service ID entered
         document.getElementById("serviceTitle").textContent = "Service Not Found";
         document.getElementById("serviceSubtitle").textContent = "Please check the URL or return to Services page.";
         document.getElementById("mainHeading").style.display = "none";

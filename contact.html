@@ -5,248 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Almoued Travel</title>
+    <meta name="description"
+        content="Get in touch with Almoued Travel. Visit our offices in UAE or India, or contact us for 24/7 travel support and inquiries.">
+    <meta name="keywords" content="Contact Almoued, Travel Support, Travel Agency Address, Customer Care Dubai">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us - Almoued Travel">
+    <meta property="og:description" content="Get in touch with Almoued Travel for all your travel needs.">
+    <meta property="og:image" content="./images/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/logo.png" />
+
+    <!-- External CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="mobile-rectification.css">
-
-    <!-- Resource Hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <style>
-        .contact-hero {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            overflow: hidden;
-            border-radius: 0 0 50px 50px;
-        }
-
-        .contact-hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .contact-hero-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            animation: zoomEffect 30s infinite alternate;
-        }
-
-        @keyframes zoomEffect {
-            0% {
-                transform: scale(1);
-            }
-
-            100% {
-                transform: scale(1.1);
-            }
-        }
-
-        .contact-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
-            z-index: 2;
-        }
-
-        .contact-hero-content {
-            position: relative;
-            z-index: 3;
-            padding: 20px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .contact-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-hero p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            line-height: 1.6;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            margin-top: -80px;
-            position: relative;
-            z-index: 10;
-            margin-bottom: 80px;
-        }
-
-        .contact-form-wrapper {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 50px;
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid #e1e1e1;
-            border-radius: 12px;
-            outline: none;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            background: #f8f9fd;
-            color: #333;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: #009af0;
-            background: #fff;
-            box-shadow: 0 0 0 4px rgba(0, 154, 240, 0.1);
-        }
-
-        .contact-info-cards {
-            display: grid;
-            grid-template-rows: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .contact-card-premium {
-            background: white;
-            padding: 35px;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid #f0f0f0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-card-premium::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #009af0, #fea300);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .contact-card-premium:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-        }
-
-        .contact-card-premium:hover::after {
-            transform: scaleX(1);
-        }
-
-        .card-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #e3f2fd, #fff3e0);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
-            transition: all 0.4s ease;
-        }
-
-        .card-icon i {
-            background: linear-gradient(135deg, #009af0, #fea300);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contact-card-premium:hover .card-icon {
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        .card-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-            font-weight: 700;
-        }
-
-        .card-content p {
-            color: #666;
-            margin: 0;
-            line-height: 1.5;
-            font-size: 0.95rem;
-        }
-
-
-
-        @media (max-width: 900px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                margin-top: 40px;
-            }
-
-            .contact-hero {
-                height: 50vh;
-                border-radius: 0 0 30px 30px;
-            }
-
-            .contact-form-wrapper {
-                padding: 30px;
-            }
-
-            .contact-info-cards {
-                margin-top: 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -280,18 +62,20 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
-        <div class="contact-hero-bg">
-            <img fetchpriority="high" src="./images/contactus.jpg" alt="Contact Us">
+    <!-- Parallax Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img id="contactHeroImg" fetchpriority="high" src="./images/contactus.jpg" alt="Contact Us">
         </div>
-        <div class="contact-hero-overlay"></div>
-        <div class="contact-hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Get In <span class="highlight"
-                    style="background: linear-gradient(135deg, #fff, #ddd); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Touch</span>
-            </h1>
-            <p>We are here to help you plan your next adventure. Reach out to us for any queries or customized travel
-                plans.</p>
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="page-hero-badge">
+                <i class="fas fa-comments"></i>
+                <span>We'd Love to Hear From You</span>
+            </div>
+            <h1>Get In <span class="highlight">Touch</span></h1>
+            <p>Ready to plan your next adventure? Our team is here to answer your questions and create the perfect
+                itinerary for you.</p>
         </div>
     </section>
 
@@ -299,171 +83,215 @@
     <section class="section">
         <div class="container">
             <div class="contact-grid">
-                <!-- Contact Form -->
+                <!-- Premium Contact Form -->
                 <div class="contact-form-wrapper" data-aos="fade-up" data-aos-duration="800">
-                    <h2 style="margin-bottom: 25px; font-size: 2rem;">Send us a Message</h2>
+                    <h2>Send us a Message</h2>
                     <form id="contact-form">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input type="text" placeholder="First name" required>
+                                <input type="text" id="firstName" class="form-control" placeholder=" " required>
+                                <label for="firstName" class="form-label">First Name</label>
                             </div>
                             <div class="form-group">
-                                <label>Last Name</label>
-                                <input type="text" placeholder="Last name" required>
+                                <input type="text" id="lastName" class="form-control" placeholder=" " required>
+                                <label for="lastName" class="form-label">Last Name</label>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" placeholder="john@example.com" required>
+                            <input type="email" id="email" class="form-control" placeholder=" " required>
+                            <label for="email" class="form-label">Email Address</label>
                         </div>
+
                         <div class="form-group">
-                            <label>Subject</label>
-                            <select>
-                                <option>General Inquiry</option>
-                                <option>Flight Booking</option>
-                                <option>Visa Assistance</option>
-                                <option>Holiday Package</option>
-                                <option>Other</option>
+                            <select id="subject" class="form-control form-select">
+                                <option value="general">General Inquiry</option>
+                                <option value="booking">Flight Booking</option>
+                                <option value="visa">Visa Assistance</option>
+                                <option value="holiday">Holiday Package</option>
+                                <option value="other">Other</option>
                             </select>
+                            <!-- Label not needed for select as it has default value usually, or custom implementation -->
                         </div>
+
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea rows="5" placeholder="How can we help you?" required></textarea>
+                            <textarea id="message" class="form-control" placeholder=" " required></textarea>
+                            <label for="message" class="form-label"></label>
                         </div>
-                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+
+                        <button type="submit" class="btn-primary"
+                            style="width: 100%; justify-content: center; padding: 18px;">
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
 
+                <!-- Success Toast Notification -->
+                <div id="successToast" class="toast-notification">
+                    <div class="toast-content">
+                        <i class="fas fa-check-circle toast-icon"></i>
+                        <div class="toast-message">
+                            <h4>Message Sent!</h4>
+                            <p>Thanks! We'll be in touch soon.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Contact Info Cards -->
                 <div class="contact-info-cards">
-                    <div class="contact-card-premium" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="contact-card-premium" data-aos="fade-left" data-aos-delay="200">
                         <div class="card-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Our Location</h3>
+                            <h3>Visit Us</h3>
                             <p>Musaffah - Shabiya ME-11,</p>
                             <p>Abu Dhabi, UAE</p>
-                            <p style="font-size: 0.9rem; margin-top: 5px;">P.O Box: 57049</p>
+                            <p style="font-size: 0.85rem; margin-top: 5px; opacity: 0.7;">P.O Box: 57049</p>
                         </div>
                     </div>
 
-                    <div class="contact-card-premium" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                    <div class="contact-card-premium" data-aos="fade-left" data-aos-delay="300">
                         <div class="card-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Phone Number</h3>
+                            <h3>Call Us</h3>
                             <p>+971 4 123 4567</p>
-                            <p style="font-size: 0.9rem; margin-top: 5px;">Available 24/7 for support.</p>
+                            <p style="font-size: 0.85rem; margin-top: 5px; opacity: 0.7;">Available 24/7 Support</p>
                         </div>
                     </div>
 
-                    <div class="contact-card-premium" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                    <div class="contact-card-premium" data-aos="fade-left" data-aos-delay="400">
                         <div class="card-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Email Address</h3>
+                            <h3>Email Us</h3>
                             <p>info@almouedtravel.com</p>
-                            <p style="font-size: 0.9rem; margin-top: 5px;">We reply within 24 hours.</p>
+                            <p style="font-size: 0.85rem; margin-top: 5px; opacity: 0.7;">Response within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-container" data-aos="zoom-in">
+                <iframe
+                    src="https://maps.google.com/maps?q=Musaffah%20Shabiya%20ME-11%20Abu%20Dhabi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+                    <h2 class="section-title">Common <span class="highlight">Questions</span></h2>
+                    <p class="section-subtitle">Everything you need to know about booking with us.</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item active" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            <span>How do I book a holiday package?</span>
+                            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can book a package by contacting us directly through our website, calling our support
+                                line, or visiting our office. Our travel experts will help you customize your itinerary
+                                to valid your preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question">
+                            <span>Do you provide visa assistance?</span>
+                            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide comprehensive visa assistance for many countries including the UK, USA,
+                                Schengen area, and more. Check our "Global Visa Services" page for specific details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-question">
+                            <span>What documents do I need for travel?</span>
+                            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Typically, you need a valid passport (with at least 6 months validity), a valid visa for
+                                your destination, flight tickets, and hotel bookings. Specific requirements vary by
+                                destination.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="faq-question">
+                            <span>Can I change my booking after confirmation?</span>
+                            <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, changes can be made subject to airline and hotel policies. Please contact our
+                                support team as soon as possible to minimize any change fees.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section footer-logo-section">
-                        <div class="footer-logo">
-                            <img src="./images/New Logo white llc.png" alt="Almoued Travel Logo"
-                                class="footer-logo-image">
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/almouedtravel" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/almouedtravel" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                            <a href="https://twitter.com/almouedtravel" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/almouedtravel" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://www.youtube.com/@almouedtravel" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="destinations.html">Destinations</a></li>
-                            <li><a href="packages.html">Packages</a></li>
-                            <li><a href="team.html">Core Team</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li><a href="services.html">Air Tickets</a></li>
-                            <li><a href="service-details.html?service=visa">Global Visa Services</a></li>
-                            <li><a href="services.html">Hotel Bookings</a></li>
-                            <li><a href="packages.html">Holiday Packages</a></li>
-                            <li><a href="services.html">Umrah Assistance</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section footer-contact">
-                        <h4>Contact Info</h4>
-                        <div class="contact-info">
-                            <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
-                                <p>Musaffah - Shabiya ME-11,<br>Abu Dhabi, UAE</p>
-                            </div>
-                            <div class="contact-item"><i class="fas fa-phone"></i>
-                                <p>+971 4 123 4567</p>
-                            </div>
-                            <div class="contact-item"><i class="fas fa-envelope"></i>
-                                <p>info@almouedtravel.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Almoued Travel. All rights reserved.</p>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Almoued Travel. All rights reserved.</p>
             </div>
-        </footer>
-        <!-- Back to Top Button -->
-
-        <div class="back-to-top" id="backToTop">
-            <i class="fas fa-arrow-up"></i>
-            <div class="back-to-top-ripple"></div>
         </div>
+    </footer>
 
-        <!-- WhatsApp Floating Button -->
-        <a href="https://wa.me/971412345678?text=Hello%20Almoued%20Travel!%20I%20would%20like%20to%20get%20in%20touch."
-            class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i>
-            <span class="whatsapp-tooltip">Chat with us!</span>
-            <div class="whatsapp-pulse"></div>
-        </a>
+    <!-- Back to Top & WhatsApp -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+        <div class="back-to-top-ripple"></div>
+    </div>
+
+    <a href="https://wa.me/971412345678" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+        <div class="whatsapp-pulse"></div>
+    </a>
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="script.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.querySelector('#contactHeroImg');
+            if (heroBg) heroBg.style.transform = `translateY(${scrolled * 0.4}px)`;
+        });
+
+        // FAQ Interaction
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

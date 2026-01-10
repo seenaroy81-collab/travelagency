@@ -1,0 +1,338 @@
+/* =========================================
+   DETAILS PAGES PREMIUM STYLES
+   ========================================= */
+
+/* Parallax Hero Enhancements */
+.page-hero {
+    height: 70vh;
+    /* Taller hero for details pages */
+    min-height: 500px;
+    attachment: fixed;
+    /* Simple parallax */
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    /* Taller for parallax movement */
+    z-index: 1;
+    transform: translateZ(0);
+    /* Hardware accel */
+    will-change: transform;
+}
+
+.page-hero-bg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Glass Title Card */
+.page-hero-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px 60px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.3s;
+}
+
+/* Content Layout */
+.service-body {
+    padding: 100px 0;
+    background: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.service-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Main Content Typography */
+.service-main h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--dark);
+    letter-spacing: -0.03em;
+}
+
+.service-main p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 32px;
+}
+
+/* Enhanced Feature List */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--light-gray);
+    padding: 20px 24px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 154, 240, 0.2);
+}
+
+.feature-icon {
+    color: var(--blue);
+    font-size: 1.4rem;
+    background: rgba(0, 154, 240, 0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+    position: sticky;
+    top: 100px;
+    /* Offset from fixed navbar */
+    height: fit-content;
+}
+
+.sidebar-widget {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-widget:hover {
+    transform: translateY(-5px);
+}
+
+.widget-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--light-gray);
+    color: var(--dark);
+}
+
+/* Premium Book Widget */
+.contact-widget {
+    background: linear-gradient(135deg, #009af0 0%, #007bb8 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #fea300 0%, transparent 60%);
+    opacity: 0.2;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.contact-widget h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.contact-widget p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.contact-widget .btn-primary {
+    background: white;
+    color: var(--blue);
+    width: 100%;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-widget .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Other Links List */
+.other-services-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    color: #666;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.other-services-list li a::after {
+    content: '\f054';
+    /* FontAwesome arrow right */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.other-services-list li a:hover {
+    color: var(--blue);
+    padding-left: 8px;
+}
+
+.other-services-list li a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Visa Special Section */
+.visa-country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.visa-country-card {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.visa-country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 154, 240, 0.15);
+    border-color: var(--blue);
+}
+
+.visa-country-flag {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.visa-country-name {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+/* Visa Detail View */
+.visa-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.visa-back-btn {
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.visa-back-btn:hover {
+    color: var(--blue);
+}
+
+.visa-requirements-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    list-style: none;
+    margin: 30px 0;
+}
+
+.visa-requirement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 16px;
+    background: var(--light-gray);
+    border-radius: 12px;
+}
+
+.visa-requirement-icon {
+    color: var(--blue);
+    margin-top: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .service-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sidebar {
+        position: static;
+        order: 1;
+        /* Keep sidebar after content on mobile? Or before? Usually after. */
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}

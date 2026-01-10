@@ -35,8 +35,52 @@ body {
     color: var(--dark);
     overflow-x: hidden;
     font-weight: 400;
-    font-size: 12.6px;
     /* Changed from 11.9px to 12.6px (90%) */
+}
+
+/* Global Page Entrance Animation */
+body {
+    opacity: 0;
+    animation: pageFadeIn 0.8s ease forwards;
+}
+
+@keyframes pageFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Global Premium Enhancements */
+::selection {
+    background: var(--logo-orange);
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #fea300, #009af0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #e69200, #007bb8);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.02em;
+    /* Premium tight spacing */
 }
 
 /* Utility Classes */
@@ -148,23 +192,28 @@ body {
     }
 }
 
-/* Navigation - UNCHANGED */
+/* Navigation - Transparent to Solid */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    /* Start transparent */
+    backdrop-filter: blur(0px);
+    /* Start clear */
+    box-shadow: none;
     z-index: 1000;
-    padding: 15px 0;
-    transition: all 0.3s ease;
+    padding: 25px 0;
+    /* Taller initially */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 12px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
 }
 
 .nav-container {
@@ -259,6 +308,62 @@ body {
 
 .navbar.scrolled .hamburger {
     background: var(--dark);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 1001;
+    /* Above navbar */
+    pointer-events: none;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: var(--logo-gradient);
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Skeleton Loader Styles */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.skeleton-text {
+    height: 1em;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.skeleton-title {
+    height: 2em;
+    width: 60%;
+    margin-bottom: 1em;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 /* =========================================
@@ -2906,4 +3011,65 @@ body {
     color: #666;
     margin-bottom: 20px;
     line-height: 1.6;
+}
+
+/* =========================================
+   TOAST NOTIFICATION STYLES
+   ========================================= */
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 5px solid #28a745;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 20px 25px;
+    border-radius: 12px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transform: translateX(150%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    max-width: 400px;
+}
+
+.toast-notification.active {
+    transform: translateX(0);
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.toast-icon {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+.toast-message h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.toast-message p {
+    margin: 4px 0 0 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Mobile Toast */
+@media (max-width: 480px) {
+    .toast-notification {
+        right: 20px;
+        left: 20px;
+        bottom: 20px;
+        width: auto;
+    }
 }

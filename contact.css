@@ -1,0 +1,272 @@
+/* Contact Page Premium Styles */
+
+/* Layout & Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    margin-top: -80px;
+    /* Overlap hero */
+    position: relative;
+    z-index: 10;
+    margin-bottom: 80px;
+}
+
+/* Premium Form Wrapper */
+.contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    /* Smoother shadow */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.contact-form-wrapper h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    background: var(--logo-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+/* Floating Label Inputs */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    /* For floating label positioning */
+}
+
+/* Input Styles */
+.form-control {
+    width: 100%;
+    padding: 18px 20px;
+    /* Taller padding */
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(0, 154, 240, 0.1);
+}
+
+.form-control::placeholder {
+    color: transparent;
+    /* Hide default placeholder for floating label effect */
+}
+
+/* Floating Label */
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: white;
+    padding: 0 5px;
+}
+
+.form-group textarea.form-control {
+    min-height: 150px;
+    resize: none;
+}
+
+.form-group textarea.form-control+.form-label {
+    top: 25px;
+    /* Align to top for textarea */
+}
+
+/* Floating State */
+.form-control:focus+.form-label,
+.form-control:not(:placeholder-shown)+.form-label {
+    top: 0;
+    font-size: 0.8rem;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/* Select Styling */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* Map Section */
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    margin: 60px 0;
+    position: relative;
+    border: 8px solid white;
+    /* Frame effect */
+    background: #f0f0f0;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(100%) contrast(1.2) opacity(0.9);
+    /* Styled map */
+    transition: filter 0.5s ease;
+}
+
+/* FAQ Accordion */
+.faq-section {
+    padding: 80px 0;
+    background: #fafafa;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.faq-item.active {
+    border-color: rgba(0, 154, 240, 0.2);
+}
+
+.faq-question {
+    padding: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: transform 0.4s ease;
+    color: var(--blue);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+    background: var(--blue);
+    color: white;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 24px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    /* Arbitrary enough height */
+    padding-bottom: 24px;
+}
+
+
+
+/* Contact Info Cards (Existing but refined) */
+.contact-info-cards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card-premium {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* (Retaining the hover logic and icon styles from previous version essentially, 
+   just ensuring they match new variables) */
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e3f2fd, #fff3e0);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+}
+
+.card-icon i {
+    background: var(--logo-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+    .map-container {
+        height: 300px;
+        margin: 40px 0;
+    }
+}

@@ -20,8 +20,10 @@
         initializeCounters();
         hideLoadingScreen();
         initializeBackToTop();
+        initializeBackToTop();
         initializeScrollEffects();
         initializeParallax();
+        initializeScrollProgressBar();
 
         // Initialize AOS if available
         setTimeout(initializeAOS, 100);
@@ -65,6 +67,21 @@
         });
 
         console.log('🧹 Content cleanup complete');
+    }
+
+    // ================================
+    // SCROLL PROGRESS BAR
+    // ================================
+    function initializeScrollProgressBar() {
+        const progressBar = document.querySelector('.scroll-progress-bar');
+        if (!progressBar) return;
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + '%';
+        });
     }
 
     // ================================
@@ -644,110 +661,58 @@
     }
 
     function initializeServiceCardAnimations() {
-        const serviceCards = document.querySelectorAll('.services .service-card');
+        const serviceCards = document.querySelectorAll('.services .service-card, .service-card-premium');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0) scale(1)';
                         entry.target.classList.add('animated');
-
-                        // Add special hover effects
-                        entry.target.addEventListener('mouseenter', function () {
-                            this.style.transform = 'translateY(-15px) scale(1.02)';
-                            const glow = this.querySelector('.service-glow');
-                            if (glow) glow.style.opacity = '1';
-
-                            const arrow = this.querySelector('.service-arrow');
-                            if (arrow) arrow.style.transform = 'translateX(0) scale(1.1)';
-                        });
-
-                        entry.target.addEventListener('mouseleave', function () {
-                            this.style.transform = 'translateY(0) scale(1)';
-                            const glow = this.querySelector('.service-glow');
-                            if (glow) glow.style.opacity = '0';
-
-                            const arrow = this.querySelector('.service-arrow');
-                            if (arrow) arrow.style.transform = 'translateX(100%) scale(1)';
-                        });
-                    }, index * 150);
+                    }, index * 100);
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
-        serviceCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px) scale(0.9)';
-            card.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1)`;
+        serviceCards.forEach((card) => {
             observer.observe(card);
         });
     }
 
     function initializeDestinationCardAnimations() {
-        const destinationCards = document.querySelectorAll('.destinations .service-card');
+        const destinationCards = document.querySelectorAll('.destinations .service-card, .service-card-premium');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0) rotateY(0)';
                         entry.target.classList.add('animated');
-
-                        // Add rotation hover effect
-                        entry.target.addEventListener('mouseenter', function () {
-                            this.style.transform = 'translateY(-8px) rotateY(5deg)';
-                        });
-
-                        entry.target.addEventListener('mouseleave', function () {
-                            this.style.transform = 'translateY(0) rotateY(0)';
-                        });
-                    }, index * 120);
+                    }, index * 100);
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
-        destinationCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px) rotateY(-10deg)';
-            card.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1)`;
+        destinationCards.forEach((card) => {
             observer.observe(card);
         });
     }
 
     function initializePackageCardAnimations() {
-        const packageCards = document.querySelectorAll('.packages .service-card');
+        const packageCards = document.querySelectorAll('.packages .service-card, .service-card-premium');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateX(0) scale(1)';
                         entry.target.classList.add('animated');
-
-                        // Add slide hover effect
-                        entry.target.addEventListener('mouseenter', function () {
-                            this.style.transform = 'translateY(-12px) scale(1.02)';
-                        });
-
-                        entry.target.addEventListener('mouseleave', function () {
-                            this.style.transform = 'translateY(0) scale(1)';
-                        });
-                    }, index * 200);
+                    }, index * 100);
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
-        packageCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = index % 2 === 0 ? 'translateX(-50px) scale(0.9)' : 'translateX(50px) scale(0.9)';
-            card.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1)`;
+        packageCards.forEach((card) => {
             observer.observe(card);
         });
     }
@@ -759,38 +724,14 @@
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0) scale(1)';
                         entry.target.classList.add('animated');
-
-                        // Animate step number
-                        const stepNumber = entry.target.querySelector('.step-number');
-                        if (stepNumber) {
-                            stepNumber.style.animation = 'pulse 2s infinite';
-                        }
-
-                        // Add bounce hover effect
-                        entry.target.addEventListener('mouseenter', function () {
-                            this.style.transform = 'translateY(-10px) scale(1.02)';
-                            const decoration = this.querySelector('.step-decoration');
-                            if (decoration) decoration.style.opacity = '1';
-                        });
-
-                        entry.target.addEventListener('mouseleave', function () {
-                            this.style.transform = 'translateY(0) scale(1)';
-                            const decoration = this.querySelector('.step-decoration');
-                            if (decoration) decoration.style.opacity = '0';
-                        });
-                    }, index * 250);
+                    }, index * 150);
                     observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
-        teamCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(60px) scale(0.8)';
-            card.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1)`;
+        teamCards.forEach((card) => {
             observer.observe(card);
         });
     }
@@ -1178,7 +1119,7 @@
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('click', function () {
                 const serviceName = this.querySelector('h3').textContent;
-                showServiceModal(serviceName);
+                // showServiceModal(serviceName); // Not using modal for services currently
             });
 
             // Add cursor pointer
@@ -1188,9 +1129,7 @@
         // Team member interactions
         document.querySelectorAll('.step-item').forEach(member => {
             member.addEventListener('click', function () {
-                const memberName = this.querySelector('h3').textContent;
-                const memberRole = this.querySelector('.team-role').textContent;
-                showTeamMemberInfo(memberName, memberRole);
+                // Optional: interactivity for team members
             });
 
             member.style.cursor = 'pointer';
@@ -1204,6 +1143,38 @@
                 document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Contact Form Handling (Toast)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Simulate sending (would be AJAX normally)
+                const btn = contactForm.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+
+                // Loading state
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    // Success State
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    contactForm.reset();
+
+                    // Show Toast
+                    const toast = document.getElementById('successToast');
+                    if (toast) {
+                        toast.classList.add('active');
+                        setTimeout(() => {
+                            toast.classList.remove('active');
+                        }, 4000);
+                    }
+                }, 1500);
+            });
+        }
 
         console.log('🎪 Enhanced interactions initialized');
     }
