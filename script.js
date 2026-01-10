@@ -857,7 +857,7 @@
                 // Trigger welcome animation
                 triggerWelcomeAnimation();
             }, 800);
-        }, 1500);
+        }, 3500);
 
         console.log('🎬 Loading screen hidden');
     }
