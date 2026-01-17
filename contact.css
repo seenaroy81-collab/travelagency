@@ -209,6 +209,148 @@
     padding-bottom: 24px;
 }
 
+/* Branches Section */
+.branches-section {
+    padding: 100px 0 60px;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    border-radius: 30px;
+    margin: 60px 0;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.branch-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 154, 240, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--logo-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0, 154, 240, 0.15);
+    border-color: rgba(0, 154, 240, 0.2);
+}
+
+.branch-card:hover::before {
+    transform: scaleX(1);
+}
+
+.branch-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(0, 154, 240, 0.1) 0%, rgba(247, 148, 30, 0.1) 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.branch-icon i {
+    font-size: 1.6rem;
+    background: var(--logo-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.4s ease;
+}
+
+.branch-card:hover .branch-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(0, 154, 240, 0.2) 0%, rgba(247, 148, 30, 0.2) 100%);
+}
+
+.branch-card:hover .branch-icon i {
+    transform: scale(1.1);
+}
+
+.branch-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.branch-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.branch-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.branch-detail-item i {
+    color: var(--blue);
+    font-size: 1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.branch-detail-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.branch-detail-item a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.branch-detail-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--logo-gradient);
+    transition: width 0.3s ease;
+}
+
+.branch-detail-item a:hover {
+    background: var(--logo-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.branch-detail-item a:hover::after {
+    width: 100%;
+}
+
 
 
 /* Contact Info Cards (Existing but refined) */
@@ -268,5 +410,34 @@
     .map-container {
         height: 300px;
         margin: 40px 0;
+    }
+
+    .branches-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .branches-section {
+        padding: 60px 20px 40px;
+        margin: 40px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .branches-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .branch-card {
+        padding: 25px 20px;
+    }
+
+    .branch-name {
+        font-size: 1.15rem;
+    }
+
+    .branches-section {
+        padding: 50px 15px 30px;
     }
 }

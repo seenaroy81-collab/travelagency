@@ -439,12 +439,23 @@
     }
 
     // ================================
-    // CONTACT FORM
+    // CONTACT FORM WITH EMAILJS
     // ================================
 
     function initializeContactForm() {
         const form = document.getElementById('contact-form');
         if (!form) return;
+
+        // Initialize EmailJS (replace with your actual keys)
+        // Get your keys from https://www.emailjs.com/
+        const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace this
+        const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace this
+        const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace this
+
+        // Initialize EmailJS
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+        }
 
         form.addEventListener('submit', handleFormSubmit);
 
@@ -477,7 +488,7 @@
         function handleFormSubmit(e) {
             e.preventDefault();
 
-            const submitBtn = form.querySelector('.submit-btn');
+            const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.querySelector('span').textContent;
 
             // Validate form
@@ -486,40 +497,57 @@
                 return;
             }
 
-            // Show loading state with ripple effect
+            // Show loading state
             submitBtn.disabled = true;
             submitBtn.querySelector('span').innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-            // Trigger submit ripple
-            const ripple = submitBtn.querySelector('.submit-ripple');
-            if (ripple) {
-                ripple.style.left = '100%';
-                setTimeout(() => ripple.style.left = '-100%', 500);
-            }
+            // Prepare email data
+            const templateParams = {
+                from_name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: 'info@almouedtravel.com' // Your Gmail address
+            };
 
-            // Simulate form submission with realistic delay
-            setTimeout(() => {
-                showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
-                form.reset();
+            // Send email using EmailJS
+            if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                    .then(function (response) {
+                        console.log('Email sent successfully!', response.status, response.text);
+                        showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
+                        form.reset();
+
+                        // Reset button
+                        submitBtn.disabled = false;
+                        submitBtn.querySelector('span').innerHTML = originalText;
+
+                        // Reset form states
+                        inputs.forEach(input => {
+                            input.parentElement.classList.remove('focused');
+                            const highlight = input.parentElement.querySelector('.input-highlight');
+                            if (highlight) {
+                                highlight.style.width = '0';
+                            }
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Email send failed:', error);
+                        showMessage('Oops! Something went wrong. Please try again or contact us directly.', 'error');
+
+                        // Reset button
+                        submitBtn.disabled = false;
+                        submitBtn.querySelector('span').innerHTML = originalText;
+                    });
+            } else {
+                // Fallback if EmailJS is not configured
+                console.warn('EmailJS not configured. Please set up your EmailJS keys.');
+                showMessage('Email service not configured. Please contact us at info@almouedtravel.com', 'error');
 
                 // Reset button
                 submitBtn.disabled = false;
                 submitBtn.querySelector('span').innerHTML = originalText;
-
-                // Reset form states and highlights
-                inputs.forEach(input => {
-                    input.parentElement.classList.remove('focused');
-                    const highlight = input.parentElement.querySelector('.input-highlight');
-                    if (highlight) {
-                        highlight.style.width = '0';
-                    }
-                });
-
-                // Announce success to screen readers
-                if (window.announceToScreenReader) {
-                    window.announceToScreenReader('Your message has been sent successfully');
-                }
-            }, 2500);
+            }
         }
 
         function validateForm() {
